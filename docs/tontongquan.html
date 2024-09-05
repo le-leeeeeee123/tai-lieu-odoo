@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Quản lý giỏ hàng nhặt</title>
+<title>HydePHP - Tồn kho tổng quan</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Quản lý giỏ hàng nhặt">
-<meta property="og:title" content="HydePHP - Quản lý giỏ hàng nhặt">
+<meta name="twitter:title" content="HydePHP - Tồn kho tổng quan">
+<meta property="og:title" content="HydePHP - Tồn kho tổng quan">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -111,7 +111,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Kho Van</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -147,14 +147,11 @@
             <a href="../docs/Dichchuyendiadiem.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Dịch chuyển địa điểm
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/Quanlygangionhathang.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/Quanlygangionhathang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý giỏ hàng nhặt
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                    </ul>
+    </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -238,7 +235,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Xem Ton Kho</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -254,11 +251,14 @@
             <a href="../docs/Tonkhotongquan.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tồn kho chi tiết
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/tontongquan.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/tontongquan.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tồn kho tổng quan
         </a>
-    </li>                                    </ul>
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                    </ul>
             </li>
             </ul>
     </nav>
@@ -271,18 +271,35 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Quản lý giỏ hàng nhặt</h1>
+        <h1>Tồn kho tổng quan</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p>Người quản lý phân công nhặt hàng: chức năng này mục đích dành cho người quản lý kho vận phân công công việc đầu ngày khi có danh sách các phiếu picking cần đi nhặt.Người quản lý so sẽ gán việc cho từng user</p>
-<p><strong>Bước 1:</strong> Người quản lý vào màn <code>Phiếu lấy/đóng hàng</code></p>
-<p><img src="./khovan/1image-6.png" alt="alt text" /></p>
-<p><strong>Bước 2:</strong> Lọc danh sách các phiếu nháp</p>
-<p><img src="./khovan/1image-3.png" alt="alt text" /></p>
-<p><strong>Bước 3:</strong> Chọn danh sách phiếu cần gán (1 hoặc nhiều phiếu). Người lấy hàng chọn <code>Set&gt;&gt; Người lấy hàng&gt;apply</code></p>
-<p><img src="./khovan/1image-4.png" alt="alt text" /></p>
-<p><strong>Bước 4:</strong> Sau khi gán thành công, user được gán đăng nhập vào hệ thống vào menu  <code>Phiếu lấy/đóng hàng</code>. Hệ thống list danh sách  <code>My picking</code>. Là những picking được quản lý gán và phiếu đã ở trạng thái xác nhận.</p>
-<p><img src="./khovan/1image-5.png" alt="alt text" /></p>
+        <p><strong>Bước 1:</strong> Vào <code>Kho vận</code></p>
+<p><img src="./tonkho/image.png" alt="alt text" /></p>
+<p><strong>Bước 2:</strong> Bấm dấu + chọn  <code>Tồn kho tổng quan</code></p>
+<p><img src="./tonkho/image-1.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Hiển thị màn hình báo cáo tổng quan</p>
+<p><img src="./tonkho/image-7.png" alt="alt text" /></p>
+<p><strong>Bước 4:</strong> Người dùng cũng có thể chọn cách hiển thị cột dọc bên trái theo mã lô, sku... Ví dụ bên dưới chọn hiển thị theo SKU
+<img src="./tonkho/image-13.png" alt="alt text" />
+<img src="./tonkho/image-14.png" alt="alt text" /></p>
+<p><strong>Một số tiện ích hỗ trợ việc xem thông tin</strong></p>
+<ul>
+<li>Xuất báo cáo</li>
+</ul>
+<p><img src="./tonkho/image-9.png" alt="alt text" /></p>
+<ul>
+<li>Bộ lọc theo yêu cầu người dùng</li>
+</ul>
+<p><img src="./tonkho/image-10.png" alt="alt text" /></p>
+<ul>
+<li>Nhóm thông tin : Ví dụ nhóm theo Số lô...</li>
+</ul>
+<p><img src="./tonkho/image-11.png" alt="alt text" /></p>
+<ul>
+<li>Yêu thích: ví dụ hỗ trợ người dùng ghim bộ lọc yêu thích lại, lần sau vào không cần lọc lại.</li>
+</ul>
+<p><img src="./tonkho/image-12.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
