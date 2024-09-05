@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Lô hạn sử dụng</title>
+<title>HydePHP - Cấu hình nhặt hàng/tạo phiếu pick list</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Lô hạn sử dụng">
-<meta property="og:title" content="HydePHP - Lô hạn sử dụng">
+<meta name="twitter:title" content="HydePHP - Cấu hình nhặt hàng/tạo phiếu pick list">
+<meta property="og:title" content="HydePHP - Cấu hình nhặt hàng/tạo phiếu pick list">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -111,7 +111,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Kho Van</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -151,11 +151,14 @@
             <a href="../docs/Quanlygangionhathang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý giỏ hàng nhặt
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/Y. Cấu hình nhặt hàng.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/Y. Cấu hình nhặt hàng.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Cấu hình nhặt hàng/tạo phiếu pick list
         </a>
-    </li>                                    </ul>
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -209,7 +212,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Phan He Mua Hang</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -233,14 +236,11 @@
             <a href="../docs/Quản lý thông tin NCC.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý thông tin NCC
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/Serial Numbers.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/Serial Numbers.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Lô hạn sử dụng
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                    </ul>
+    </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -275,55 +275,40 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Lô hạn sử dụng</h1>
+        <h1>Cấu hình nhặt hàng/tạo phiếu pick list</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p><strong>1. Số lô/sê-ri</strong>
-Chức năng này quản lý số lô và hạn sử dụng của từng sản phẩm. Theo dõi hạn sử dụng sản phẩm để có kế hoạch bán và xuất hàng theo FEFO <code>(FEFO là từ viết tắt của First Expired First Out, có nghĩa là hết hạn trước, xuất trước. )</code></p>
-<p><strong>Bước 1:</strong> Người dùng vào menu: <code>Mua hàng &gt;&gt; Lots/Serial Numbers </code></p>
-<p><img src="./hansudunglo/image.png" alt="alt text" /></p>
-<p><img src="./hansudunglo/image1.png" alt="alt text" /></p>
-<p><strong>Bước 2:</strong> Thêm mới lô hạn chưa có của một sản phẩm</p>
-<p><img src="./hansudunglo/image1.png" alt="alt text" /></p>
-<p><img src="./hansudunglo/image2.png" alt="alt text" /></p>
-<p><strong>Bước 3:</strong> Thêm thông tin</p>
+        <p>Chức năng này có mục đích cấu hình gom danh sách đơn theo tiêu chí tạo các picklist phù hợp cho việc nhặt hàng.</p>
+<p><strong>Bước 1:</strong> Vào menu <code>Phiếu lấy/đóng hàng</code>
+<img src="./khovan/setpicklist1.png" alt="alt text" />
+<strong>Bước 2:</strong> Chọn cấu hình nhặt hàng
+<img src="./khovan/setpicklist.png" alt="alt text" />
+<strong>Bước 3:</strong> Hiển thị danh sách cấu hình nhặt hàng, người dùng muốn thêm mới chọn nút <code>mới</code> để cấu hình nhặt hàng
+<img src="./khovan/setpicklist-2.png" alt="alt text" />
+<strong>Bước 4:</strong> Hiển thị màn hình thêm mới cấu hình nhặt hàng và các thông tin cần cấu hình gồm:
+<img src="./khovan/setpicklist-3.png" alt="alt text" /></p>
+<p>Màu đỏ là các trường bắt buộc phải chọn
+<img src="./khovan/setpicklist1-1.png" alt="alt text" /></p>
 <ul>
-<li>Số lô</li>
-<li>Sản phẩm</li>
-<li>Ngày hết hạn</li>
+<li>Kích hoạt điều kiện</li>
+<li>Điều kiện chính theo: <img src="./khovan/setpicklistdieukienchinh.png" alt="alt text" />
+</li>
+<li>Sản phẩm cần tạo phiếu riêng: Chọn sản phẩm</li>
+<li>Khi điều kiện sản phẩm cần tạo phiếu riêng có chọn sản phẩm thì==&gt; Điều kiện là đơn 1 sản phẩm: sẽ được check mặc định</li>
+<li>Số đơn hàng tối đa: Nhập số lượng đơn hàng tối đa trong 1 phiếu picklist</li>
+<li>Số lượng sku tối đa: Hiển thị số lượng sku tối đa trong 1 phiếu picklist</li>
+<li>Số lượng sản phẩm tối đa: nhập số lượng sản phẩm tối đa trong 1 phiếu picklist
+Chú ý: Check điều kiện ưu tiên từ cao đến thấp
+<code>Số lượng sản phẩm tối đa&gt;&gt;Số lượng sku tối đa&gt;&gt;Số đơn hàng tối đa</code>
+</li>
 </ul>
-<p><img src="./hansudunglo/image-2.png" alt="alt text" /></p>
-<p><strong>Bước 4:</strong> Lưu thông tin đã khai báo</p>
-<p><img src="./hansudunglo/image-3.png" alt="alt text" /></p>
-<h1>2.import Số lô/sê-ri</h1>
-<p><strong>Bước 1:</strong> hệ thống cung cấp file mẫu excel để người dùng nhập dữ liệu:</p>
-<ul>
-<li>Vào mục import lô</li>
-</ul>
-<p><img src="./hansudunglo/image-4.png" alt="alt text" /></p>
-<p><strong>Bước 2:</strong> Tải tập tin đúng định dạng lên (có thể lấy file mẫu ở nút bên cạnh nút <code>Import lô</code>)</p>
-<p><img src="./hansudunglo/image-5.png" alt="alt text" /></p>
-<h1>3.Tác vụ hỗ trợ việc theo dõi , thống kê</h1>
-<ul>
-<li>Hệ thống có hỗi trợ người dùng lọc thông tin tìm kiếm liên quan số lô vàn hạn sử dụng</li>
-</ul>
-<p><img src="./hansudunglo/timkiemlo.png" alt="alt text" /></p>
-<ul>
-<li>Hỗ trợ nhóm dữ liệu theo người dùng cấu hình</li>
-</ul>
-<p><img src="./hansudunglo/nhomlo.png" alt="alt text" /></p>
-<ul>
-<li>Danh sách hiển thị hoặc ẩn một số trường mong muốn hoặc không mong muốn thấy màn danh sách</li>
-</ul>
-<p><img src="./hansudunglo/anhien.png" alt="alt text" /></p>
-<ul>
-<li>Ngoài ra mục <code>Yêu thích</code> hỗ trợ pin tìm kiếm theo cài đặt</li>
-</ul>
-<p><img src="./hansudunglo/yeuthichlo.png" alt="alt text" /></p>
-<ul>
-<li>Người dùng còn có thể <code>Xuất toàn bộ</code> sản phẩm có thông tin lô và hạn sử dụng</li>
-</ul>
-<p><img src="./hansudunglo/xuattoanbo.png" alt="alt text" /></p>
+<p>+Đơn vị vận chuyển
++Kho: chọn kho
++Kênh kinh doanh:chọn kênh
++Nguồn: chọn nguồn
++Nội dung điều kiện: tóm tắt lại các điều kiện đã set ở bên trên</p>
+<p><strong>Bước 4:</strong> Lưu thông tin: Lưu thông tin thành công, tạo cấu hình phiếu picklist thành công
+<strong>Khi có đơn được tạo , hệ thống sẽ dựa trên các cấu hình picklist để tạo ra danh sách picklist theo cấu hình mà người dùng đã khai báo trước đó</strong></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
