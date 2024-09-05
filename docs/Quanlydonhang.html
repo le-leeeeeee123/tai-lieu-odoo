@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Tạo địa điểm cận date</title>
+<title>HydePHP - Quản lý đơn hàng</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Tạo địa điểm cận date">
-<meta property="og:title" content="HydePHP - Tạo địa điểm cận date">
+<meta name="twitter:title" content="HydePHP - Quản lý đơn hàng">
+<meta property="og:title" content="HydePHP - Quản lý đơn hàng">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -73,7 +73,7 @@
 </div>    </header>
     <nav id="sidebar-navigation" class="p-2 overflow-y-auto border-y border-gray-300 dark:border-[#1b2533] h-full">
         <ul id="sidebar-items" role="list">
-                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Cau Hinh Kho</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -89,14 +89,11 @@
             <a href="../docs/1.Taokhomain.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo kho
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/2.Diadiemcandate.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/2.Diadiemcandate.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo địa điểm cận date
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/3.KhohangloiHCM.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo kho hàng lỗi
         </a>
@@ -182,7 +179,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Phan He Ban Hang</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -194,11 +191,14 @@
     </svg>
 </button>                                    </header>
                 <ul class="sidebar-group-items ml-4 px-2 mb-2" role="list"  x-show="groupOpen" >
-                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/Quanlydonhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/Quanlydonhang.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý đơn hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/Quanlykhachhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý khách hàng
         </a>
@@ -267,25 +267,126 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Tạo địa điểm cận date</h1>
+        <h1>Quản lý đơn hàng</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p>Địa điểm lưu trữ các sản phẩm cận date</p>
-<p><strong>Bước 1:</strong> vào  <code>Kho vận &gt;&gt;  Quản lý kho&gt;&gt;Địa điểm </code></p>
-<p><img src="./%E1%BA%A3nh1/image.png" alt="alt text" /></p>
-<p><img src="./%E1%BA%A3nh1/image-12.png" alt="alt text" /></p>
-<p><strong>Bước 2:</strong> Để tạo một địa điểm mới, người dùng kích nút <code> TẠO</code> , màn hình tạo mới được hiển thị.
-<img src="./%E1%BA%A3nh1/image-14.png" alt="alt text" /></p>
-<p><img src="./%E1%BA%A3nh1/image-15.png" alt="alt text" /></p>
-<p><strong>Bước 4:</strong> tạo địa điểm cận date HCM. Nhập thông tin cần khai báo</p>
-<p><img src="./%E1%BA%A3nh1/image-13.png" alt="alt text" /></p>
+        <p>Chức năng này giúp người dùng quản lý hoạt động bán hàng trên hệ thống, từ đó có thể quản lý được các đơn hàng, doanh thu và khách hàng của doanh nghiệp. Từ đó đưa ra các chính sách bán hàng hợp lý. Để tạo đơn hàng, người dùng thực hiện các thao tác sau:</p>
+<p><strong>Bước 1:</strong> Người dùng chọn menu <code>Bán hàng &gt;&gt; Mới để mở màn hình đơn hàng.</code></p>
+<p><img src="image.png" alt="alt text" />
+<img src="image-1.png" alt="alt text" /></p>
+<p><strong>Bước 2:</strong> Nhập các thông tin của đơn hàng:
+<img src="image-2.png" alt="alt text" />
+<img src="image-3.png" alt="alt text" /></p>
 <ul>
-<li>Địa điểm cha: SGN</li>
-<li>Mã vạch</li>
-<li>Phương thức nhập/xuất kho: FEFO</li>
-<li>View user: múc đích show thông tin địa điểm này ở các menu như Địa điểm, chuyển đổi lô, dịch chuyển địa điểm</li>
+<li>
+<p>Thông điệp?: hiển thị thông điệp nếu có của đơn hàng, ví dụ:
+<img src="image-4.png" alt="alt text" /></p>
+</li>
+<li>
+<p>Khách hàng: thông tin khách hàng đặt hàng, số điện thoại + địa chỉ: ex
+Tiktok 7494009406835295246
+Ng********
+Nghĩa Hưng
+Nam Định Việt Nam</p>
+</li>
+<li>
+<p>Mã vận đơn: nhập mã vận đơn (nếu có)</p>
+</li>
+<li>
+<p>Nguồn: chọn nguồn cho đơn hàng: ex
+Tiktok Chifure
+Team marketing?
+Sàn Thương Mại Điện Tử</p>
+</li>
+<li>
+<p>Tổng số lượng sản phẩm</p>
+</li>
+<li>
+<p>Tổng hợp sản phẩm</p>
+</li>
+<li>
+<p>Hết hạn:</p>
+</li>
+<li>
+<p>Ngày Báo giá: ngày lên đơn báo giá: ex
+05/09/2024 09:55:45</p>
+</li>
+<li>
+<p>Loại sản phẩm: NEW</p>
+</li>
+<li>
+<p>Phiếu vận chuyển</p>
+</li>
+<li>
+<p>Ngày giao hàng</p>
+</li>
+<li>
+<p>Trạng thái hoàn hàng</p>
+</li>
+<li>
+<p>Bảng giá</p>
+</li>
+<li>
+<p>Bảng giá niêm yết (VND)</p>
+</li>
+<li>
+<p>Các điều khoản thanh toán:</p>
+</li>
+<li>
+<p>Số lượng đơn hàng = 1</p>
+</li>
+<li>
+<p>Nhân viên bán hàng: ex Nguyễn Thế Toàn</p>
+</li>
+<li>
+<p>Kho:Kho Hà Nội</p>
+</li>
+<li>
+<p>Phương thức giao hàng:Ninjavan</p>
+</li>
+<li>
+<p>Dịch vụ cộng thêm?</p>
+</li>
+<li>
+<p>Dịch vụ vận chuyển?
+Standard / Tiêu chuẩn
+Tiền thu hộ?₫
+...</p>
+</li>
 </ul>
-<p><strong>Bước 5:</strong> Người dùng kích nút LƯU để Lưu thông tin cấu hình</p>
+<p><strong>Mục Chi tiết đơn hàng: kích Thêm sản phẩm để thêm các sản phẩm muốn bán cho khách hàng.</strong></p>
+<p><img src="image-5.png" alt="alt text" /></p>
+<p>Lưu ý: Tại màn hình bán hàng, người dùng có thể check luôn được số lượng tồn kho của sản phẩm đang được chọn bán bằng cách kích vào biểu tượng <img src="image-7.png" alt="alt text" /> bên cạnh cột <code>Đơn vị</code>.</p>
+<p><img src="image-6.png" alt="alt text" /></p>
+<ul>
+<li>
+<p>Nếu <img src="image-9.png" alt="alt text" /> có màu đỏ có nghĩa là tồn kho sản phẩm không đủ để đáp ứng số lượng bán.</p>
+</li>
+<li>
+<p>Nếu <img src="image-7.png" alt="alt text" /> có màu xanh có nghĩa là tồn kho sản phẩm đủ để đáp ứng số lượng bán.</p>
+</li>
+<li>
+<p>Mục Sản phẩm tùy chọn: Kích Thêm một dòng để thêm các sản phẩm tùy chọn (gợi ý bán) cho khách hàng. Các sản phẩm này chỉ mang tính chất tham khảo cho khách hàng, không tính vào giá trị của đơn hàng.</p>
+</li>
+<li>
+<p>Mục Thông tin khác: chứa các thông tin về nhóm bán hàng, nhân viên chăm sóc, thông tin lên hóa đơn, giao hàng (kho xuất hàng, ngày giao, chính sách giao hàng) hay các thông tin tham chiếu khác liên quan (chiến dịch, kênh, nguồn,…).</p>
+</li>
+</ul>
+<p><strong>Bước 3:</strong> Kích Lưu để lưu đơn hàng trạng thái Báo giá.
+<img src="image-10.png" alt="alt text" /></p>
+<p><strong>Bước 4:</strong> <code>Xác nhận</code> đơn hàng, xác nhận đơn bán . Trạng thái đơn chuyển thành: <code>Sẵn sàng lấy hàng</code> khi đó đơn sẽ hiển thị thông tin  số lượng sản phẩm, và số lô của sản phẩm
+<img src="image-11.png" alt="alt text" /></p>
+<p><strong>Bước 5:</strong> Tạo hóa đơn công nợ:</p>
+<ul>
+<li>Vào phần giao hàng</li>
+</ul>
+<p><img src="image-12.png" alt="alt text" /></p>
+<ul>
+<li>Chọn xem các phiếu pick. thông tin phiếu, chi tiết phiếu</li>
+<li>Tại phiếu giao hàng: kích nút Kiểm tra khả dụng để kiểm tra xem tại kho đang chọn có đủ hàng để xuất cho khách hàng hay không. Nếu không đủ tồn, phiếu kho vẫn ở trạng thái Chờ. Nếu đủ, phiếu kho sẽ chuyển sang trạng thái Sẵn sàng và các sản phẩm đủ điều kiện xuất đi sẽ được hiển thị tại mục chi tiết như hình.</li>
+</ul>
+<p><img src="image-13.png" alt="alt text" /></p>
+<p><img src="image-14.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         

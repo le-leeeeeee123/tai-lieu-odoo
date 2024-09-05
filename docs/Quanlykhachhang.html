@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Tạo địa điểm cận date</title>
+<title>HydePHP - Quản lý khách hàng</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Tạo địa điểm cận date">
-<meta property="og:title" content="HydePHP - Tạo địa điểm cận date">
+<meta name="twitter:title" content="HydePHP - Quản lý khách hàng">
+<meta property="og:title" content="HydePHP - Quản lý khách hàng">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -73,7 +73,7 @@
 </div>    </header>
     <nav id="sidebar-navigation" class="p-2 overflow-y-auto border-y border-gray-300 dark:border-[#1b2533] h-full">
         <ul id="sidebar-items" role="list">
-                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                            <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Cau Hinh Kho</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -89,14 +89,11 @@
             <a href="../docs/1.Taokhomain.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo kho
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/2.Diadiemcandate.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/2.Diadiemcandate.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo địa điểm cận date
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/3.KhohangloiHCM.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo kho hàng lỗi
         </a>
@@ -182,7 +179,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Phan He Ban Hang</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -198,11 +195,14 @@
             <a href="../docs/Quanlydonhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý đơn hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/Quanlykhachhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/Quanlykhachhang.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý khách hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/Quanlynhombanhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý nhóm bán hàng (Kênh bán hàng)
         </a>
@@ -267,25 +267,40 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Tạo địa điểm cận date</h1>
+        <h1>Quản lý khách hàng</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p>Địa điểm lưu trữ các sản phẩm cận date</p>
-<p><strong>Bước 1:</strong> vào  <code>Kho vận &gt;&gt;  Quản lý kho&gt;&gt;Địa điểm </code></p>
-<p><img src="./%E1%BA%A3nh1/image.png" alt="alt text" /></p>
-<p><img src="./%E1%BA%A3nh1/image-12.png" alt="alt text" /></p>
-<p><strong>Bước 2:</strong> Để tạo một địa điểm mới, người dùng kích nút <code> TẠO</code> , màn hình tạo mới được hiển thị.
-<img src="./%E1%BA%A3nh1/image-14.png" alt="alt text" /></p>
-<p><img src="./%E1%BA%A3nh1/image-15.png" alt="alt text" /></p>
-<p><strong>Bước 4:</strong> tạo địa điểm cận date HCM. Nhập thông tin cần khai báo</p>
-<p><img src="./%E1%BA%A3nh1/image-13.png" alt="alt text" /></p>
+        <p>Chức năng này giúp người dùng quản lý được thông tin KH, từ đó đưa ra các chính sách bán hàng hợp lý. Để xem thông tin KH, người dùng thao tác như sau:</p>
+<p><strong>Bước 1:</strong> Người dùng chọn menu <code>Bán hàng &gt;&gt; Đơn hàng &gt;&gt; Khách hàng &gt;&gt;</code> Chọn 1 KH để xem thông tin.</p>
+<p><img src="image-15.png" alt="alt text" /></p>
+<p><img src="image-16.png" alt="alt text" />
+Tại đây người dùng có thể kiểm tra được các thông tin xoay quanh khách hàng:
+<img src="image-17.png" alt="alt text" /></p>
 <ul>
-<li>Địa điểm cha: SGN</li>
-<li>Mã vạch</li>
-<li>Phương thức nhập/xuất kho: FEFO</li>
-<li>View user: múc đích show thông tin địa điểm này ở các menu như Địa điểm, chuyển đổi lô, dịch chuyển địa điểm</li>
+<li>
+<p>Danh sách khách hàng</p>
+</li>
+<li>
+<p>Bên cạnh đó, người dùng cũng có thể xem được thông tin như SĐT, địa chỉ,… của KH.</p>
+</li>
 </ul>
-<p><strong>Bước 5:</strong> Người dùng kích nút LƯU để Lưu thông tin cấu hình</p>
+<p><strong>Bước 2:</strong> Kích nút Tạo để mở màn hình tạo mới khách hàng:</p>
+<p><img src="image-18.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Nhập các thông tin của khách hàng: tên, mã, địa chỉ, mã số thuế, số điện thoại, email,…</p>
+<p><img src="image-19.png" alt="alt text" /></p>
+<ul>
+<li>
+<p>Các liên hệ và địa chỉ: Kích vào nút Thêm để mở màn hình tạo các liên hệ, địa chỉ xuất hóa đơn, địa chỉ giao hàng, địa chỉ khác hay địa chỉ cá nhân liên quan đến khách hàng. Một khách hàng có thể có nhiều liên hệ hay địa chỉ liên quan.</p>
+</li>
+<li>
+<p>Bán và mua: chứa các thông tin liên quan đến hoạt động mua và bán liên quan đến khách hàng như nhóm khách hàng, thông tin chăm sóc khi mua hàng, thông tin điều khoản mua hàng (nếu cũng là nhà cung cấp), vị thế tài chính,…</p>
+</li>
+<li>
+<p>Ghi chú nội bộ: thêm các ghi chú liên quan đến khách hàng (nếu có).</p>
+</li>
+</ul>
+<p><strong>Bước 4:</strong> Kích nút Lưu để lưu khách hàng vừa tạo. Lưu thành công hiển thị màn hình danh sách
+<img src="image-20.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
