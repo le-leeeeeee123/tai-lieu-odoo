@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Quản lý nhóm bán hàng (Kênh bán hàng)</title>
+<title>HydePHP - Bán hàng với đơn cận date</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Quản lý nhóm bán hàng (Kênh bán hàng)">
-<meta property="og:title" content="HydePHP - Quản lý nhóm bán hàng (Kênh bán hàng)">
+<meta name="twitter:title" content="HydePHP - Bán hàng với đơn cận date">
+<meta property="og:title" content="HydePHP - Bán hàng với đơn cận date">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -207,11 +207,14 @@
             <a href="../docs/Banhangdiadiem.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Bán hàng theo địa điểm
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/Banhangdoncandate.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/Banhangdoncandate.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Bán hàng với đơn cận date
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/Importdondaily.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Import đơn hàng đại lý
         </a>
@@ -223,14 +226,11 @@
             <a href="../docs/Quanlykhachhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý khách hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/Quanlynhombanhang.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/Quanlynhombanhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quản lý nhóm bán hàng (Kênh bán hàng)
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                    </ul>
+    </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -295,17 +295,22 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Quản lý nhóm bán hàng (Kênh bán hàng)</h1>
+        <h1>Bán hàng với đơn cận date</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p>Chức năng này giúp người dùng quản lý các kênh bán hàng của doanh nghiệp và các thành viên trong nhóm bán hàng. Để kiểm tra thông tin của nhóm bán hàng, người dùng thực hiện các thao tác sau:</p>
-<p>Người dùng chọn menu <code>Bán hàng &gt;&gt; Đơn hàng &gt;&gt; Nhóm bán hàng.</code>
-<img src="./banhang/image-22.png" alt="alt text" />
-<img src="./banhang/image-21.png" alt="alt text" /></p>
-<p>Tại đây người dùng có thể kiểm tra xem nhóm bán hàng có bao nhiêu cơ hội, bao nhiêu đơn hàng và trạng thái của các đơn hàng.</p>
-<p>​<img src="./banhang/image-23.png" alt="alt text" /></p>
-<p>Người dùng kích tại đây để xem các thông tin khác như tiềm năng, cơ hội, đơn bán hàng,…</p>
-<p>​​​​</p>
+        <p><strong>Bước 1:</strong> Người dùng đăng nhập hệ thống <a href="https://erp.bestme.vn/">https://erp.bestme.vn/</a> --&gt; Chọn bán hàng
+<img src="./banhang/cd.png" alt="alt text" />
+<img src="./banhang/cd-1.png" alt="alt text" />
+<strong>Bước 2:</strong> Thêm mới một đơn bán hàng
+<img src="./banhang/cd-2.png" alt="alt text" />
+<img src="./banhang/cd-3.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Ví dụ thêm mới một đơn bán hàng như sau:
+<img src="./banhang/cd-4.png" alt="alt text" /></p>
+<p><code>Lưu ý 1: Chọn tag overdue và phần mô tả sản phẩm của các line cận date ghi overdue vào (bắt buộc), lưu ý không chọn lô cho các sản phẩm cận date</code></p>
+<p><code>Lưu ý 2 : Chọn tag=overdue</code></p>
+<p><code>Lưu ý 3: Một đơn bán hàng không thể lên đơn vừa là địa điểm chỉ định ví dụ như địa điểm matsu vừa là overdue được, cũng như phần tag chỉ được chọn 1 overdue hoặc matsu</code>
+<img src="./banhang/cd-5.png" alt="alt text" /></p>
+<p><img src="./banhang/cd-6.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
