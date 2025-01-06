@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Cất hàng vào địa điểm</title>
+<title>HydePHP - Cất hàng</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Cất hàng vào địa điểm">
-<meta property="og:title" content="HydePHP - Cất hàng vào địa điểm">
+<meta name="twitter:title" content="HydePHP - Cất hàng">
+<meta property="og:title" content="HydePHP - Cất hàng">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -143,11 +143,14 @@
             <a href="../docs/3.Pack.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Đóng hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/4.1. Cathang hoàn hàng.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/4.1. Cathang hoàn hàng.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Cất hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/4.Hoanhang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Hoàn hàng
         </a>
@@ -155,14 +158,11 @@
             <a href="../docs/5.1Chuyendoilo.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Chuyển đổi lô
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/5.Cất hàng vào địa điểm.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/5.Cất hàng vào địa điểm.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Cất hàng vào địa điểm
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/7. Outhangrakhoidiadiem.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Lấy hàng ra khỏi địa điểm
         </a>
@@ -307,31 +307,32 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Cất hàng vào địa điểm</h1>
+        <h1>Cất hàng</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p>Chức năng này mục đích cất hàng vào địa điểm trong kho
-Điều kiện: Hoàn thành nhặt đơn</p>
-<p><strong>Bước 1:</strong> Quét giỏ hàng đã hoàn thành nhặt đơn
-<img src="./khovan/cathang.png" alt="alt text" />
-<strong>Bước 2:</strong> Hiển thị danh sách sản phẩm cần cất hàng
-<img src="./khovan/cathang1.png" alt="alt text" />
-<strong>Bước 3:</strong> Thông tin chi tiết sản phẩm cần cất gồm:
-+ Tên sản phẩm
-+ SKU
+        <p>Mục đích: cất hàng từ giỏ về các vị trí khác nhau
+<strong>Bước 1:</strong> Vào menu <code> Cất hàng</code>
+<img src="./khovan/newcathang.png" alt="alt text" /></p>
+<p><strong>Bước 2:</strong> Quét giỏ ở trạng thái <code>Chờ cất</code></p>
+<p><img src="./khovan/newcathang-4.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong>  Hiển thị thông tin giỏ</p>
+<pre><code>+ Mã phiếu
++ Tên phiếu
++ Mã giỏ
++ Sản phẩm
 + Địa điểm gợi í
-+ Số lượng
-<img src="./khovan/cathang2.png" alt="alt text" />
-<strong>Bước 4:</strong> Click hoàn thành cất sản phẩm
-<img src="./khovan/cathang3.png" alt="alt text" />
-<strong>Bước 5:</strong> Sau khi cất hết sản phẩm thì hoàn thành thành <code>Hoàn thành toàn bộ</code>
-<img src="./khovan/cathang4.png" alt="alt text" /></p>
-<p><img src="./khovan/cathang5.png" alt="alt text" />
-<strong>Bước 6:</strong> <code>Hoàn thành việc cất hàng</code>
-<img src="./khovan/cathang6.png" alt="alt text" />
-<strong>Bước 7:</strong>
-<img src="./khovan/cathang7.png" alt="alt text" />
-<img src="./khovan/cathang8.png" alt="alt text" /></p>
++ Quét địa điểm
++ Lô
++ Số lượng cần cất
+</code></pre>
+<p><img src="./khovan/newcathang-1.png" alt="alt text" /></p>
+<p><strong>Bước 4:</strong> Quét địa điểm cần cất</p>
+<p><img src="./khovan/newcathang-2.png" alt="alt text" /></p>
+<p><strong>Bước 5:</strong> Chọn số lượng cất</p>
+<p><img src="./khovan/newcathang-3.png" alt="alt text" /></p>
+<p>Lưu ý: Có thể chia thành nhiều địa điểm cất khác nhau</p>
+<p><strong>Bước 5:</strong> Khi cất hết sản phẩm Chọn nút ** Hoàn thành cất hàng free giỏ**==&gt; Hoàn thành việc cất hàng
+<img src="./khovan/newcathang-5.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
