@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Tồn kho chi tiết</title>
+<title>HydePHP - Kiểm tra chênh lệch nhặt hàng</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Tồn kho chi tiết">
-<meta property="og:title" content="HydePHP - Tồn kho chi tiết">
+<meta name="twitter:title" content="HydePHP - Kiểm tra chênh lệch nhặt hàng">
+<meta property="og:title" content="HydePHP - Kiểm tra chênh lệch nhặt hàng">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -119,7 +119,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Kho Van</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -135,11 +135,14 @@
             <a href="../docs/1.Taogio.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Tạo giỏ hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/10.Kiemtrachenhlechnhathang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/10.Kiemtrachenhlechnhathang.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Kiểm tra chênh lệch nhặt hàng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+
+                    <span class="sr-only">Table of contents</span>
+            
+            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/2.Nhathang.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Quy trình nhặt hàng
         </a>
@@ -279,7 +282,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Xem Ton Kho</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -312,38 +315,25 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Tồn kho chi tiết</h1>
+        <h1>Kiểm tra chênh lệch nhặt hàng</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p><strong>Bước 1:</strong> Vào <code>Kho vận</code>
-<img src="./tonkho/image.png" alt="alt text" />
-<strong>Bước 2:</strong> Bấm dấu + chọn  <code>Tồn kho chi tiết</code>
-<img src="./tonkho/image-1.png" alt="alt text" />
-<strong>Bước 3:</strong> Hiển thị danh sách tồn kho chi tiết của từng sản phẩm các thông tin ví dụ như:</p>
+        <p>Sau khi PKO hoàn thành đóng gói việc các đơn &quot;đang lấy hàng&quot; &quot;đã đóng gói&quot; bị sàn hủy sẽ ở phần chênh lệch này.</p>
+<p><strong>Bước 1:</strong> Vào menu &quot;Xử lý đơn hàng/ Chênh lệch nhặt hàng&quot;
+<img src="./khovan/chenhlech-1.png" alt="alt text" />
+<img src="./khovan/chenhlech-2.png" alt="alt text" /></p>
+<p><strong>Bước 2:</strong> Gom các phiếu với trạng thái &quot;Chưa xử lý&quot;
+<img src="./khovan/chenhlech-3.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Gán mã giỏ cho phiếu và bấm nút &quot;Dịch chuyển địa điểm&quot;
+<img src="./khovan/chenhlech-4.png" alt="alt text" />
+Khi đó hệ thống sinh ra một phiếu dịch chuyển, người dùng thực hiện quét giỏ để cất hàng vào các địa điểm
+<img src="./khovan/chenhlech-5.png" alt="alt text" /></p>
+<h1>Kiểm tra tồn vị trí với các chênh lệch nhặt hàng</h1>
+<p>Sau khi PKO hoàn thành đóng gói việc các đơn &quot;đang lấy hàng&quot; &quot;đã đóng gói&quot; bị sàn hủy sẽ ở phần chênh lệch admin check tồn ở vị trí:</p>
 <ul>
-<li>Địa điểm</li>
-<li>Sản phẩm</li>
-<li>Số lô</li>
-<li>....</li>
+<li>Hà Nội: 	KCN/Cancellation</li>
+<li>SGN:  	SGN/Cancellation</li>
 </ul>
-<p><strong>Một số tiện ích hỗ trợ việc xem thông tin</strong></p>
-<ul>
-<li>Xuất báo cáo</li>
-</ul>
-<p><img src="./tonkho/image-2.png" alt="alt text" />
-<img src="./tonkho/image-3.png" alt="alt text" /></p>
-<ul>
-<li>Bộ lọc theo yêu cầu người dùng</li>
-</ul>
-<p><img src="./tonkho/image-4.png" alt="alt text" /></p>
-<ul>
-<li>Nhóm thông tin : Ví dụ nhóm theo Số lô...</li>
-</ul>
-<p><img src="./tonkho/image-5.png" alt="alt text" /></p>
-<ul>
-<li>Yêu thích: ví dụ hỗ trợ người dùng ghim bộ lọc yêu thích lại, lần sau vào không cần lọc lại.</li>
-</ul>
-<p><img src="./tonkho/image-6.png" alt="alt text" /></p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
