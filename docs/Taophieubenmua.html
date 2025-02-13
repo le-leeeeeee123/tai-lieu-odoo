@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HydePHP - Bán hàng với đơn cận date</title>
+<title>HydePHP - Mua hàng import excel</title>
 
 
 
-<meta name="twitter:title" content="HydePHP - Bán hàng với đơn cận date">
-<meta property="og:title" content="HydePHP - Bán hàng với đơn cận date">
+<meta name="twitter:title" content="HydePHP - Mua hàng import excel">
+<meta property="og:title" content="HydePHP - Mua hàng import excel">
 
 
 <meta name="generator" content="HydePHP v1.7.3">
@@ -203,7 +203,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Phan He Ban Hang</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -219,14 +219,11 @@
             <a href="../docs/Banhangdiadiem.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Bán hàng theo địa điểm
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
-            <a href="../docs/Banhangdoncandate.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+            <a href="../docs/Banhangdoncandate.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Bán hàng với đơn cận date
         </a>
-
-                    <span class="sr-only">Table of contents</span>
-            
-            </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
             <a href="../docs/Importdondaily.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Import đơn hàng đại lý
         </a>
@@ -244,7 +241,7 @@
         </a>
     </li>                                    </ul>
             </li>
-                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
+                    <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: true }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
                     <h4 class="sidebar-group-heading text-base font-semibold  cursor-pointer dark:group-hover:text-white ">Phan He Mua Hang</h4>
                                             <button class="sidebar-group-toggle opacity-50 group-hover:opacity-100">
@@ -272,11 +269,19 @@
             <a href="../docs/Serial Numbers.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
             Lô hạn sử dụng
         </a>
-    </li>                                            <li class="sidebar-item -ml-4 pl-4" role="listitem">
-            <a href="../docs/Taophieubenmua.html" class="-ml-8 pl-4 py-1 px-2 block border-l-[0.325rem] border-transparent transition-colors duration-300 ease-in-out hover:bg-black/10">
+    </li>                                            <li class="sidebar-item -ml-4 pl-4 active -ml-8 pl-8 bg-black/5 dark:bg-black/10" role="listitem">
+            <a href="../docs/Taophieubenmua.html" aria-current="true" class="-ml-8 pl-4 py-1 px-2 block text-indigo-600 dark:text-indigo-400 dark:font-medium border-l-[0.325rem] border-indigo-500 transition-colors duration-300 ease-in-out hover:bg-black/10">
             Mua hàng import excel
         </a>
-    </li>                                    </ul>
+
+                    <span class="sr-only">Table of contents</span>
+            <ul class="table-of-contents">
+<li>
+<a href="#tạo-phiếu-mua-hàng-bằng-cách-import-danh-sách-sản-phẩm-theo-phiếu-mua">Tạo phiếu mua hàng bằng cách import danh sách sản phẩm theo phiếu mua</a>
+</li>
+</ul>
+
+            </li>                                    </ul>
             </li>
                     <li class="sidebar-group" role="listitem"  x-data="{ groupOpen: false }" >
                 <header class="sidebar-group-header p-2 px-4 -ml-2 flex justify-between items-center  group hover:bg-black/10 "  @click="groupOpen = ! groupOpen" >
@@ -311,22 +316,58 @@
         <article id="document" itemscope itemtype="https://schema.org/Article" class="mx-auto lg:ml-8 max-w-3xl p-12 md:px-16 max-w-[1000px] min-h-[calc(100vh_-_4rem)] prose dark:prose-invert">
     
     <header id="document-header" class="flex items-center flex-wrap justify-between prose-h1:mb-3">
-        <h1>Bán hàng với đơn cận date</h1>
+        <h1>Mua hàng import excel</h1>
     </header>
     <section id="document-main-content" itemprop="articleBody">
-        <p><strong>Bước 1:</strong> Người dùng đăng nhập hệ thống <a href="https://erp.bestme.vn/">https://erp.bestme.vn/</a> --&gt; Chọn bán hàng
-<img src="./banhang/cd.png" alt="alt text" />
-<img src="./banhang/cd-1.png" alt="alt text" />
-<strong>Bước 2:</strong> Thêm mới một đơn bán hàng
-<img src="./banhang/cd-2.png" alt="alt text" />
-<img src="./banhang/cd-3.png" alt="alt text" /></p>
-<p><strong>Bước 3:</strong> Ví dụ thêm mới một đơn bán hàng như sau:
-<img src="./banhang/cd-4.png" alt="alt text" /></p>
-<p><code>Lưu ý 1: Chọn tag overdue và phần mô tả sản phẩm của các line cận date ghi overdue vào (bắt buộc), lưu ý không chọn lô cho các sản phẩm cận date</code></p>
-<p><code>Lưu ý 2 : Chọn tag=overdue</code></p>
-<p><code>Lưu ý 3: Một đơn bán hàng không thể lên đơn vừa là địa điểm chỉ định ví dụ như địa điểm matsu vừa là overdue được, cũng như phần tag chỉ được chọn 1 overdue hoặc matsu</code>
-<img src="./banhang/cd-5.png" alt="alt text" /></p>
-<p><img src="./banhang/cd-6.png" alt="alt text" /></p>
+        <h2>Tạo phiếu mua hàng bằng cách import danh sách sản phẩm theo phiếu mua<a id="tạo-phiếu-mua-hàng-bằng-cách-import-danh-sách-sản-phẩm-theo-phiếu-mua" href="#tạo-phiếu-mua-hàng-bằng-cách-import-danh-sách-sản-phẩm-theo-phiếu-mua" class="heading-permalink" title="Permalink"></a></h2>
+<p><strong>Bước 1:</strong> Vào menu : <code>Mua hàng &gt;&gt; MỚI</code>
+<img src="./%E1%BA%A3nh/muahang.png" alt="alt text" />
+<img src="./%E1%BA%A3nh/image-9.png" alt="alt text" /></p>
+<p><strong>Bước 2:</strong> Nhập thông tin bắt buộc trong phiếu mua</p>
+<p><img src="./%E1%BA%A3nh/image-13.png" alt="alt text" /></p>
+<ul>
+<li>
+<p>Chọn nhà cung cấp (bắt buộc)</p>
+</li>
+<li>
+<p>Hạn chốt đặt (nếu có)</p>
+</li>
+<li>
+<p>Ngày hàng về dự kiến(nếu có)</p>
+</li>
+<li>
+<p>Giao hàng đến (bắt buộc)</p>
+</li>
+</ul>
+<p>Chú ý: Chọn nơi giao đến:</p>
+<ul>
+<li>Ví dụ: Kho hà nội chọn giao đến <code>Kho KCM:Nhận hàng</code>
+</li>
+<li>Người dùng có thể xem chi tiết phần kho nhận hàng, sẽ nhận vào vị trí nào: như ảnh bên dưới người dùng có thể nhìn thấy mua hàng thành công sẽ được lưu trữ vị trị đích = <code>SGN/Nhập hàng</code>
+</li>
+</ul>
+<p><img src="./%E1%BA%A3nh/image.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Import file excel như mẫu bên dưới</p>
+<p>Template import mua hàng:<a href=" https://docs.google.com/spreadsheets/d/1yH5lBiIk_bdZguTYqMTyBY9PlUsk1-OD/edit?gid=637660824#gid=637660824">Template_muahang</a></p>
+<p><strong>Bước 4:</strong> Next bước và lưu thông tin hoàn thành phiếu mua</p>
+<h1>1. Danh sách phiếu mua hàng</h1>
+<ul>
+<li>Danh sách phiếu mua gồm thông tin phiếu mua hàng, người mua hàng, trạng thái của phiếu mua.</li>
+<li>Người dùng có thể vào chi tiết từng phiếu để xem</li>
+</ul>
+<p><img src="./%E1%BA%A3nh/image-14.png" alt="alt text" /></p>
+<h1>3. Các trạng thái trong phiếu mua</h1>
+<pre><code> Y/c báo giá
+ Đơn mua hàng
+ Đã khóa
+</code></pre>
+<p>Phân vai trò như sau: Bên mua (c Nhung, Phương Anh), Kho Vận (Anh Dũng, Hoàng...)
+<strong>Bên mua</strong>:
+Lần 1: Lên đơn dự định mua: import excel để tạo thông tin đơn mua hàng khi đó người dùng lưu lại thông tin import==&gt; Trạng thái ở <strong>Y/c báo giá</strong>
+Lần 2: Chốt xác định đơn mua khi mà hàng đã về hoặc đang về khi đó <strong>Bên mua</strong> chọn nút <strong>Xác nhận đơn hàng</strong> ==&gt; Trạng thái ở <strong>Đơn mua hàng</strong></p>
+<p><strong>Kho vận</strong>:
+Sau khi bên mua xác nhận đơn hàng, trạng thái = <strong>Đơn mua hàng</strong> bên kho thực hiện nhận số lượng sản phẩm theo lô, số lượng nhận thực tế
+Sau khi nhận đủ số lượng thực tế thì bên kho sẽ nhấn nút <strong>Nhận sản phẩm theo lô</strong>==&gt; Trạng thái chuyển <strong>Đã khóa</strong> khi đó hoàn thành việc nhập hàng</p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
