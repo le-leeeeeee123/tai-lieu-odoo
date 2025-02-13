@@ -342,40 +342,30 @@ Chức năng này giúp người dùng tạo các phiếu mua hàng</p>
 <p><img src="./%E1%BA%A3nh/image-13.png" alt="alt text" /></p>
 <ul>
 <li>
-<p>Chọn nhà cung cấp: Sau khi chọn nhà cung cấp hệ thống mặc định hiển thị loại tiền tệ của nhà cung cấp đã chọn, từ đó hệ thống sẽ lấy giá của sản phẩm theo chính sách giá đã được cấu hình trong Bảng giá của NCC (có thể thay đổi giá).</p>
+<p>Chọn nhà cung cấp (bắt buộc)</p>
 </li>
 <li>
-<p>Nhập mã nhà cung cấp.</p>
+<p>Hạn chốt đặt (nếu có)</p>
 </li>
 <li>
-<p>Ngày đặt hàng: hệ thống đang mặc định ngày tạo đơn hàng. Có thể sửa lại ngày đặt hàng.</p>
+<p>Ngày hàng về dự kiến(nếu có)</p>
 </li>
 <li>
-<p>Kích vào tab Thông tin khác, nhập các thông tin ngày nhận, giao hàng đến (kho nhận hàng), điều khoản thương mại quốc tế (nếu có), đại diện mua hàng, các điều khoản thanh toán, vị thế tài chính (nếu có).</p>
+<p>Giao hàng đến (bắt buộc)</p>
 </li>
 </ul>
 <p><img src="./%E1%BA%A3nh/image-11.png" alt="alt text" /></p>
-<p>Chú ý: Chọn đóng địa ví giao đến:</p>
+<p>Chú ý: Chọn nơi giao đến:</p>
 <ul>
 <li>Ví dụ: Kho hà nội chọn giao đến <code>Kho KCM:Nhận hàng</code>
 </li>
 <li>Người dùng có thể xem chi tiết phần kho nhận hàng, sẽ nhận vào vị trí nào: như ảnh bên dưới người dùng có thể nhìn thấy mua hàng thành công sẽ được lưu trữ vị trị đích = <code>SGN/Nhập hàng</code>
 </li>
 </ul>
-<p><img src="image.png" alt="alt text" />
-<img src="image-1.png" alt="alt text" /></p>
-<p><strong>Bước 3:</strong> Import file excel như mẫu bên dưới
-<img src="./%E1%BA%A3nh/image-12.png" alt="alt text" /></p>
-<ul>
-<li>
-<p>Gồm các thông tin :</p>
-<ul>
-<li>Skum</li>
-<li>Số lượng</li>
-<li>lot</li>
-</ul>
-</li>
-</ul>
+<p><img src="./%E1%BA%A3nh/image.png" alt="alt text" />
+<img src="./%E1%BA%A3nh/image-1.png" alt="alt text" /></p>
+<p><strong>Bước 3:</strong> Import file excel như mẫu bên dưới</p>
+<p>Template import mua hàng:<a href=" https://docs.google.com/spreadsheets/d/1yH5lBiIk_bdZguTYqMTyBY9PlUsk1-OD/edit?gid=637660824#gid=637660824">Template_muahang</a></p>
 <p><strong>Bước 4:</strong> Next bước và lưu thông tin hoàn thành phiếu mua</p>
 <h1>1. Danh sách phiếu mua hàng</h1>
 <ul>
@@ -383,6 +373,18 @@ Chức năng này giúp người dùng tạo các phiếu mua hàng</p>
 <li>Người dùng có thể vào chi tiết từng phiếu để xem</li>
 </ul>
 <p><img src="./%E1%BA%A3nh/image-14.png" alt="alt text" /></p>
+<h1>3. Các trạng thái trong phiếu mua</h1>
+<pre><code> Y/c báo giá
+ Đơn mua hàng
+ Đã khóa
+</code></pre>
+<p>Phân vai trò như sau: Bên mua (c Nhung, Phương Anh), Kho Vận (Anh Dũng, Hoàng...)
+<strong>Bên mua</strong>:
+Lần 1: Lên đơn dự định mua: import excel để tạo thông tin đơn mua hàng khi đó người dùng lưu lại thông tin import==&gt; Trạng thái ở <strong>Y/c báo giá</strong>
+Lần 2: Chốt xác định đơn mua khi mà hàng đã về hoặc đang về khi đó <strong>Bên mua</strong> chọn nút <strong>Xác nhận đơn hàng</strong> ==&gt; Trạng thái ở <strong>Đơn mua hàng</strong></p>
+<p><strong>Kho vận</strong>:
+Sau khi bên mua xác nhận đơn hàng, trạng thái = <strong>Đơn mua hàng</strong> bên kho thực hiện nhận số lượng sản phẩm theo lô, số lượng nhận thực tế
+Sau khi nhận đủ số lượng thực tế thì bên kho sẽ nhấn nút <strong>Nhận sản phẩm theo lô</strong>==&gt; Trạng thái chuyển <strong>Đã khóa</strong> khi đó hoàn thành việc nhập hàng</p>
     </section>
     <footer id="document-footer" class="flex items-center flex-wrap mt-8 prose-p:my-3 justify-between text-[90%]">
         
